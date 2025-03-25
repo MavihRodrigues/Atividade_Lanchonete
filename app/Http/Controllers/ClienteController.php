@@ -84,4 +84,13 @@ class ClienteController extends Controller
             'message' => 'Cliente excluído!'
         ]);
     }
+
+    public function index()
+    {
+        $cliente = Cliente::all();
+        return response()->json([
+            'status' => true,
+            'data' => $cliente
+        ]);
+    }
 }
