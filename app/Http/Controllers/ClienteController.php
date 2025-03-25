@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    public function cadastrar(Request $request)
+    public function create(Request $request)
     {
+        $request->validate([
+            'nome' => 'required', // Garante que o nome não será nulo
+        ]);
         $cliente = Cliente::create([
             'nome' => $request->nome,
             'endereco' => $request->endereco,

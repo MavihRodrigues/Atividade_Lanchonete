@@ -9,9 +9,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/cliente/dashboard', [ClienteController::class, 'index'])->name('clientes.dashboard');
+
 //CLIENTE
 
-Route::get('/cliente/create', [ClienteController::class, 'create']);
+Route::get('/cliente/create', [ClienteController::class, 'create'])->name('cliente.create');
 
 Route::put('/cliente/update', [ClienteController::class, 'update']);
 
