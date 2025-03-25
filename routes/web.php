@@ -11,3 +11,5 @@ Route::get('/', function () {
 Route::get('/cliente/create', [ClienteController::class, 'create']);
 
 Route::put('/cliente/update', [ClienteController::class, 'update']);
+
+Route::put('/cliente/delete', [ClienteController::class, 'delete']);

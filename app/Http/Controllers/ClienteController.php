@@ -66,4 +66,22 @@ class ClienteController extends Controller
             'message' => 'Cliente atualizado!'
         ]);
     }
+
+    public function deletar($id)
+    {
+        $cliente = Cliente::find($id);
+        if ($cliente == null) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Cliente não encontrado'
+            ]);
+        }
+
+        $cliente->delete();
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Cliente excluído!'
+        ]);
+    }
 }
