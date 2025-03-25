@@ -22,7 +22,6 @@ class ClienteController extends Controller
             'message' => 'Cliente cadastrado!',
             'data' => $cliente
         ]);
-        return view('cliente.create');
     }
 
     public function update(Request $request)
