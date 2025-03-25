@@ -21,7 +21,7 @@ class Create extends Component
     public function store()
     {
         $cliente = Cliente::create([
-            'name' => $this->nome,
+            'nome' => $this->nome,
             'endereco' => $this->endereco,
             'telefone' => $this->telefone,
             'cpf' => $this->cpf,
@@ -30,7 +30,7 @@ class Create extends Component
         ]);
 
         Cliente::create([
-            'name' => $this->name,
+            'nome' => $this->nome,
             'endereco' => $this->endereco,
             'telefone' => $this->telefone,
             'cpf' => $this->cpf,
